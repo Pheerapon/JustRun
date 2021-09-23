@@ -1,0 +1,58 @@
+table:
+  name: RunHistory
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - id
+    - time
+    - avg
+    - steps
+    - image
+    - distance
+    - user_id
+    - created_at
+    - updated_at
+    - date
+    - money
+  role: user
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns:
+    - avg
+    - created_at
+    - date
+    - distance
+    - id
+    - image
+    - money
+    - steps
+    - time
+    - updated_at
+    - user_id
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check: null
+    columns:
+    - id
+    - time
+    - avg
+    - steps
+    - image
+    - distance
+    - user_id
+    - created_at
+    - updated_at
+    - date
+    - money
+    filter: {}
+  role: user
+delete_permissions:
+- permission:
+    filter: {}
+  role: user

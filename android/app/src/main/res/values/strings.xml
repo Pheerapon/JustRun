@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Habit Run</string>
+    <!-- TODO: Change your facebook app id & protocol scheme -->
+    <string name="facebook_app_id">180856860660451</string>
+    <string name="fb_login_protocol_scheme">fb180856860660451</string>
+
+    <!-- Start HomeWidget String -->
+    <string name="hw_unit">Km</string>
+    <string name="hw_button">RUN</string>
+    <!-- END HomeWidget String -->
+</resources>

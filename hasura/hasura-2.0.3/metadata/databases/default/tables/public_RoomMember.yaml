@@ -1,0 +1,45 @@
+table:
+  name: RoomMember
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - id
+    - user_id
+    - room_id
+    - distance
+    - step
+    - time
+    - name
+  role: user
+select_permissions:
+- permission:
+    columns:
+    - distance
+    - id
+    - room_id
+    - step
+    - name
+    - time
+    - user_id
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check: {}
+    columns:
+    - distance
+    - id
+    - room_id
+    - step
+    - name
+    - time
+    - user_id
+    filter: {}
+  role: user
+delete_permissions:
+- permission:
+    filter: {}
+  role: user

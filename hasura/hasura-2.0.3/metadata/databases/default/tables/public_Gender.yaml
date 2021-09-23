@@ -1,0 +1,4 @@
+table:
+  name: Gender
+  schema: public
+is_enum: true

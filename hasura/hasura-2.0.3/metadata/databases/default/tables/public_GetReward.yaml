@@ -1,0 +1,42 @@
+table:
+  name: GetReward
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - id
+    - days_row
+    - user_id
+    - created_at
+    - updated_at
+    - get_reward
+  role: user
+select_permissions:
+- permission:
+    columns:
+    - days_row
+    - id
+    - user_id
+    - created_at
+    - get_reward
+    - updated_at
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check: null
+    columns:
+    - days_row
+    - id
+    - user_id
+    - created_at
+    - get_reward
+    - updated_at
+    filter: {}
+  role: user
+delete_permissions:
+- permission:
+    filter: {}
+  role: user

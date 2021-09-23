@@ -1,0 +1,12 @@
+table:
+  name: Badges
+  schema: public
+select_permissions:
+- permission:
+    columns:
+    - id
+    - level
+    - subtitle
+    - title
+    filter: {}
+  role: user

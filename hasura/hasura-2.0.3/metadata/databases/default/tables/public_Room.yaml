@@ -1,0 +1,39 @@
+table:
+  name: Room
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - user_id
+    - flag_start
+    - created_at
+    - updated_at
+    - id
+  role: user
+select_permissions:
+- permission:
+    columns:
+    - flag_start
+    - id
+    - user_id
+    - created_at
+    - updated_at
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check: null
+    columns:
+    - flag_start
+    - id
+    - user_id
+    - created_at
+    - updated_at
+    filter: {}
+  role: user
+delete_permissions:
+- permission:
+    filter: {}
+  role: user

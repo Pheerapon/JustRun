@@ -1,0 +1,1 @@
+enum SliderEvent { swipeRight, swipeLeft }

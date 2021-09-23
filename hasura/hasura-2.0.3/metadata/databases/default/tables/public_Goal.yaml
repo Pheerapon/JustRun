@@ -1,0 +1,45 @@
+table:
+  name: Goal
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - distance
+    - step
+    - user_id
+    - created_at
+    - updated_at
+    - id
+    - time
+  role: user
+select_permissions:
+- permission:
+    columns:
+    - distance
+    - id
+    - step
+    - time
+    - created_at
+    - updated_at
+    - user_id
+    filter: {}
+  role: user
+update_permissions:
+- permission:
+    check: null
+    columns:
+    - distance
+    - id
+    - step
+    - time
+    - created_at
+    - updated_at
+    - user_id
+    filter: {}
+  role: user
+delete_permissions:
+- permission:
+    filter: {}
+  role: user

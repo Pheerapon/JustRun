@@ -1,0 +1,14 @@
+table:
+  name: UserSkin
+  schema: public
+insert_permissions:
+- permission:
+    backend_only: false
+    check: {}
+    columns:
+    - id
+    - user_id
+    - skin_id
+    - created_at
+    - updated_at
+  role: user
