@@ -3,13 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_habit_run/app/widget_support.dart';
 import 'package:flutter_habit_run/common/constant/colors.dart';
-// import 'package:flutter_habit_run/common/constant/env.dart';
 import 'package:flutter_habit_run/common/graphql/config.dart';
 import 'package:flutter_habit_run/common/graphql/mutations.dart';
 import 'package:flutter_habit_run/common/graphql/queries.dart';
 import 'package:flutter_habit_run/common/model/user_model.dart';
-// import 'package:flutter_habit_run/feature/home/screen/ads_reward.dart';
-// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:graphql/client.dart';
 
 import '../bloc/get_reward_daily/bloc_get_reward_daily.dart';
@@ -23,8 +20,6 @@ class DailyDialog extends StatefulWidget {
 
 class _DailyDialogState extends State<DailyDialog> {
   SaveInfoUserBloc saveInfoUserBloc;
-  // BannerAd _ad;
-  // bool _isAdLoaded = false;
   Future<void> updateDailyReward(BuildContext context, int daysInRow) async {
     final int point = checkPoint(daysInRow - 1);
     final User user = FirebaseAuth.instance.currentUser;
@@ -82,33 +77,7 @@ class _DailyDialogState extends State<DailyDialog> {
     return point;
   }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _ad = BannerAd(
-  //     adUnitId: AdHelper().bannerAdUnitId,
-  //     size: AdSize.banner,
-  //     request: const AdRequest(),
-  //     listener: BannerAdListener(
-  //       onAdLoaded: (_) {
-  //         setState(() {
-  //           _isAdLoaded = true;
-  //         });
-  //       },
-  //       onAdFailedToLoad: (ad, error) {
-  //         ad.dispose();
-  //         print('Ad load failed (code=${error.code} message=${error.message})');
-  //       },
-  //     ),
-  //   );
-  //   _ad.load();
-  // }
-
-  // @override
-  // void dispose() {
-  //   _ad.dispose();
-  //   super.dispose();
-  // }
+  
 
   @override
   void didChangeDependencies() {
@@ -222,25 +191,12 @@ class _DailyDialogState extends State<DailyDialog> {
                       );
                     },
                   ),
-                  // AdsReward(
-                  //   function: updateDailyReward,
-                  //   daysInRow: daysInRow + 1,
-                  //   child: AppWidget.typeButtonStartAction(
-                  //       input: 'Checkin', bgColor: ultramarineBlue),
-                  // ),
+                 
                 ],
               );
             },
           ),
           const Expanded(child: SizedBox()),
-          // _isAdLoaded
-          //     ? Container(
-          //         height: 100,
-          //         child: AdWidget(
-          //           ad: _ad,
-          //         ),
-          //       )
-          //     : const SizedBox()
         ],
       ),
     ));
