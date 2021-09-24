@@ -143,13 +143,7 @@ class OptionLogin extends StatelessWidget {
                         context: context,
                         input: 'Policy',
                         url: EnvValue.policy),
-                    // Text(
-                    //   ' and ',
-                    //   style: AppWidget.simpleTextFieldStyle(
-                    //       height: 18, fontSize: 14, color: ultramarineBlue),
-                    // ),
-                    // createPrivacy(
-                    //     context: context, input: 'Terms', url: EnvValue.terms),
+                        context: context, input: 'Terms', url: EnvValue.terms),
                   ],
                 ),
               ],
@@ -158,10 +152,6 @@ class OptionLogin extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: AppWidget.typeButtonStartAction(
                   input: 'Login with Google',
-                  // onPressed: () {
-                  //   Navigator.push<void>(context,
-                  //       MaterialPageRoute(builder: (builder) => Welcome()));
-                  // },
                   onPressed: isChecked
                       ? () async {
                           final User firebaseUser =
