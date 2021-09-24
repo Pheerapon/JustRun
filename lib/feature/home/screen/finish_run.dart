@@ -12,7 +12,6 @@ import 'package:flutter_habit_run/common/graphql/mutations.dart';
 import 'package:flutter_habit_run/common/model/user_model.dart';
 import 'package:flutter_habit_run/common/route/routes.dart';
 import 'package:flutter_habit_run/common/util/format_time.dart';
-// import 'package:flutter_habit_run/feature/home/screen/ads_reward.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:graphql/client.dart';
 
@@ -225,19 +224,6 @@ class _FinishRunState extends State<FinishRun> {
                   FutureBuilder(
                     future: HomeWidget.getCurrentLocation(),
                     builder: (context, snapshot) {
-                      // if (snapshot.data != null) {
-                      //   return Padding(
-                      //     padding: const EdgeInsets.only(bottom: 18),
-                      //     child: AdsReward(
-                      //       function: addHistory,
-                      //       pointReward: point,
-                      //       typeReward: TypeReward.FinishRun,
-                      //       child: AppWidget.typeButtonStartAction(
-                      //           input: 'Get +$point Point',
-                      //           bgColor: ultramarineBlue),
-                      //     ),
-                      //   );
-                      // }
                       return AppWidget.typeButtonStartAction(
                           input: 'Get +$point Point',
                           onPressed: () {},
