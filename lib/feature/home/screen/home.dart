@@ -13,7 +13,6 @@ import 'package:flutter_habit_run/common/model/goal_model.dart';
 
 import 'package:flutter_habit_run/common/model/run_history_model.dart';
 import 'package:flutter_habit_run/feature/home/api_helper.dart';
-// import 'package:flutter_habit_run/feature/home/screen/dialog_daily.dart';
 import 'package:graphql/client.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -152,19 +151,7 @@ class _HomeScreenState extends State<HomeScreen>
     getGoal().whenComplete(() {
       if (getRewardDailyBloc.showDialog) {
         Future.delayed(const Duration(seconds: 3), () {
-          // showGeneralDialog(
-          //     context: context,
-          //     transitionDuration: const Duration(milliseconds: 700),
-          //     pageBuilder: (context, animation, secondaryAnimation) => Align(
-          //         alignment: Alignment.bottomCenter, child: DailyDialog()),
-          //     transitionBuilder: (context, anim1, anim2, child) {
-          //       return SlideTransition(
-          //         position:
-          //             Tween(begin: const Offset(0, 1), end: const Offset(0, 0))
-          //                 .animate(anim1),
-          //         child: child,
-          //       );
-          //     });
+         
         });
       }
     });
